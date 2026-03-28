@@ -1,3 +1,3 @@
 export const CONFIG = {
-    API_URL: "http://localhost:5000/api"
+    API_URL: "https://ai-resume-analyzer-wrcd.onrender.com"
 };

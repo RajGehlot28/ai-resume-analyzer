@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Results</title>
+    <link rel="stylesheet" href="../styling/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Resume Analysis</h1>
+        <div id="resBox"></div>
+        <button class="back-btn" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+    </div>
+
+    <script>
+        const data = JSON.parse(sessionStorage.getItem('lastAnalysis'));
+        const box = document.getElementById('resBox');
+
+        if (data) {
+            const buildSec = (title, items, colorClass) => {
+                if (!items || items.length === 0) return "";
+                return `
+                    <div class="result-section">
+                        <div class="section-head ${colorClass}">${title}</div>
+                        <ul class="list-style">
+                            ${items.map(i => `<li>${i}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+            };
+
+            box.innerHTML = `
+                <div class="score-badge">
+                    <div class="score-value">
+                        <span class="score-number">${data.score}</span>
+                        <span class="score-max">/100</span>
+                    </div>
+                    <div class="score-label">ATS Match Score</div>
+                </div>
+                ${buildSec("Matched Skills", data.matched_skills, "blue")}
+                ${buildSec("Missing Skills", data.missing_skills, "red")}
+                ${buildSec("Strengths", data.strengths, "green")}
+                ${buildSec("Weaknesses", data.weaknesses, "red")}
+                ${buildSec("Suggestions", data.suggestions, "blue")}
+            `;
+        }
+    </script>
+</body>
+</html>

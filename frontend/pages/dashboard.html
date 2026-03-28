@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../styling/style.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="main-container">
+        <nav><button id="logoutBtn" class="btn-logout">Logout</button></nav>
+        <h1>Analyze Resume</h1>
+        <p class="subtitle">Upload a PDF and paste the JD below.</p>
+        <form id="uploadForm">
+            <div class="field-group">
+                <label>Resume (PDF)</label>
+                <input type="file" id="resumeFile" accept=".pdf" required>
+            </div>
+            <div class="field-group">
+                <label>Job Description</label>
+                <textarea id="jobDescription" rows="6" required></textarea>
+            </div>
+            <button type="submit" id="analyzeBtn">Analyze Now</button>
+        </form>
+        <div style="margin-top:40px;">
+            <h3>History</h3>
+        <div id="historyList">        
+        </div>
+    </div>
+    </div>
+    <script type="module" src="../scripts/upload.js"></script>
+    <script type="module" src="../scripts/dashboard.js"></script>
+</body>
+</html>

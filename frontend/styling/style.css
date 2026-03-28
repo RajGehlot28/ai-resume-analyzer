@@ -1,0 +1,156 @@
+/* Clean & Professional UI */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    color: #334155;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Auth pages(login/register) */
+.auth-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 400px; /* Proper narrow size */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    align-self: center;
+}
+
+/* Dashboard and result pages */
+.main-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 850px; /* Proper readable width */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #1e293b; 
+    text-align: center;
+}
+.subtitle { 
+    font-size: 15px;
+    color: #64748b;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #475569;
+}
+input, textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background-color: #2563eb;
+}
+
+/* Result components */
+.score-badge {
+    background: #eff6ff;
+    border: 2px solid #3b82f6;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.score-value {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1e40af;
+}
+
+.result-section {
+    margin-top: 25px;
+}
+.section-head { 
+    font-size: 16px; 
+    font-weight: 700; 
+    padding: 8px 12px; 
+    border-radius: 4px; 
+    margin-bottom: 12px;
+}
+
+.list-style {
+    margin-left: 20px;
+    list-style-type: disc;
+    font-size: 15px;
+}
+.list-style li {
+    margin-bottom: 6px;
+}
+
+/* Dashboard history */
+.history-card {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.history-card:hover {
+    background: #f8fafc;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+.btn-logout {
+    background: #ef4444;
+    padding: 8px 16px;
+    font-size: 13px;
+}
